@@ -1,17 +1,15 @@
 const models = require('./models');
 
-// FINDING AND UPDATING ENTRIES
 
-models.User.findAll().then((results) => {
+//FILTER BY CRITERIA
+models.User.findAll({
+    where: {bio: ''}
+}).then((results) => {
   results.forEach((result) => {
-    // *** GOOD LOOKING PRINTING ***
-    // console.log("================");
-    // console.log(result.name);
-    // console.log(result.email);
-    // console.log(result.bio);
-
-    result.bio = '';
-    result.save();
+    console.log("================");
+    console.log(result.name);
+    console.log(result.email);
+    console.log(result.bio);
   })
 });
 
