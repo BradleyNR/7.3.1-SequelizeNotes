@@ -1,0 +1,16 @@
+<h1>Big Bad SQL</h1>
+
+<ul>
+  {{#each model}}
+  <li>
+    <a href="/users/{{id}}">{{name}}</a>
+  </li>
+  <li>
+    <a href="/users/{{id}}">{{email}}</a>
+  </li>
+  <li>
+    <a href="/users/{{id}}">{{bio}}</a>
+  </li>
+  <p>======^.^=======^.^=======</p>
+  {{/each}}
+</ul>
